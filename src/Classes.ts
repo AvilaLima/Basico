@@ -38,4 +38,6 @@ import {Moto} from './classes/moto'
 let honda:Moto = new Moto("bis",10000);
 
 console.log(honda.getPreco())
-document.body.innerHTML =  honda.getNome();
+console.log(honda.getNome())
+var el = document.getElementById('teste')
+el.innerText = honda.getNome()
