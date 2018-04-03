@@ -1,3 +1,4 @@
+/*
 interface IVeiculo{
     rodas:number;
     getPreco();
@@ -21,14 +22,19 @@ class Veiculo implements IVeiculo{
     }
 }
 
-let camaro:Veiculo = new Veiculo('Camaro',200000);
-
-console.log(camaro.getPreco())
 
 class Moto extends Veiculo{
 
 }
+*/
 
+import {Veiculo} from './classes/veiculo'
+
+let camaro:Veiculo = new Veiculo('Camaro',200000);
+
+console.log(camaro.getPreco())
+
+import {Moto} from './classes/moto'
 let honda:Moto = new Moto("bis",10000);
 
 console.log(honda.getPreco())
