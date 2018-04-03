@@ -2,11 +2,13 @@
     "compileOnSave": true,
     "compilerOptions": {
         "target": "es5",
-        "out": "js/script.js",
+        "outDir": "dist",
+        "removeComments": true,
+        "sourceMap": true,
         "watch": true,
         "noEmitOnError": true
     },
-    "files": [
-        "/classes",
+    "include": [
+        "src/**/*",
     ]
 }

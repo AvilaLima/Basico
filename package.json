@@ -1,8 +1,16 @@
 {
-  "name": "typescript_teste",
-  "version": "0.1",
+  "name": "Basico",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/AvilaLima/Basico.git",
+  "author": "Alexandre Lima <aiolia.lima@gmail.com>",
+  "license": "GPL",
   "dependencies": {
-    "eslint": "^4.19.1",
-    "typescript": "^2.8.1"
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.4.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^2.0.13"
   }
 }
