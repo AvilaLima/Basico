@@ -30,7 +30,7 @@ class Moto extends Veiculo{
 
 import {Veiculo} from './classes/veiculo'
 
-let camaro:Veiculo = new Veiculo('Camaro',200000);
+let camaro:Veiculo = new Veiculo('Camaro',200000)
 
 console.log(camaro.getPreco())
 
@@ -39,5 +39,4 @@ let honda:Moto = new Moto("bis",10000);
 
 console.log(honda.getPreco())
 console.log(honda.getNome())
-var el = document.getElementById('teste')
-el.innerText = honda.getNome()
+document.getElementById('teste').innerHTML= honda.getNome()

@@ -1,0 +1,178 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+exports.__esModule = true;
+var Veiculo = /** @class */ (function () {
+    //public nome:string;
+    function Veiculo(nome, preco, rodas) {
+        if (rodas === void 0) { rodas = 2; }
+        this.nome = nome;
+        this.preco = preco;
+        this.rodas = rodas;
+        this.nome = nome;
+        this.preco = preco;
+        this.rodas = rodas;
+    }
+    Veiculo.prototype.getPreco = function () {
+        return this.preco;
+    };
+    Veiculo.prototype.getRodas = function () {
+        return this.rodas;
+    };
+    Veiculo.prototype.getNome = function () {
+        return this.nome;
+    };
+    return Veiculo;
+}());
+exports.Veiculo = Veiculo;
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+exports.__esModule = true;
+var veiculo_1 = __webpack_require__(0);
+var Moto = /** @class */ (function (_super) {
+    __extends(Moto, _super);
+    function Moto() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Moto;
+}(veiculo_1.Veiculo));
+exports.Moto = Moto;
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/*
+interface IVeiculo{
+    rodas:number;
+    getPreco();
+    getRodas();
+}
+class Veiculo implements IVeiculo{
+
+    //public nome:string;
+
+    constructor(public nome:string, private preco:number, public rodas:number=2){
+        this.nome=nome;
+        this.preco=preco;
+        this.rodas=rodas
+    }
+
+    getPreco():number{
+        return this.preco;
+    }
+    getRodas():number{
+        return this.rodas;
+    }
+}
+
+
+class Moto extends Veiculo{
+
+}
+*/
+exports.__esModule = true;
+var veiculo_1 = __webpack_require__(0);
+var camaro = new veiculo_1.Veiculo('Camaro', 200000);
+console.log(camaro.getPreco());
+var moto_1 = __webpack_require__(1);
+var honda = new moto_1.Moto("bis", 10000);
+console.log(honda.getPreco());
+document.body.innerHTML = honda.getNome();
+
+
+/***/ })
+/******/ ]);
